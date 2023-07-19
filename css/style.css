@@ -1,6 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
+/* Minimal CSS Reset */
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+  
+ol, ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0 1rem;
+    border: 1px solid blue;
+}
+
+/* Navigation */
+
+nav .main-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Main */
+.section-header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* Hero Section */
+main section.hero {
+    margin: 2rem 0;
+    background-color: hsl(38, 50%, 97%);
+    padding: 0 1rem;
+}
+
+/* Features Section */
+section.chirp-features {
+    padding: 0 1rem;
+}
+
+div.features {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+div.feature-card {
+    padding: 1rem;
+    border: 1px solid hsl(0, 0%, 92%);
+    border-radius: 0.25rem;
+}
+
+div.feature-card p:first-of-type {
+    font-size: 2rem;
+}
+
+div.feature-card p:nth-of-type(2) {
+    font-weight: 600;
+    margin: 0.75rem 0;
+}
+
+div.feature-card p:last-of-type {
+    color: hsl(0, 0%, 58%);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        margin: 0 5vw;
+    }
+}
+
+@media (min-width: 868px) {
+    div.features {
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
